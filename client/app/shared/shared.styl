@@ -349,12 +349,14 @@ body
 	position relative
 	@extend .flex
 	justify-content flex-start
+	max-width 520px
 	margin-bottom 20px
 
 .o-card-group
 	position relative
 	@extend .paper-shadow-z1
-	margin-right 7px
+	width 100%
+	max-width 520px
 	margin-bottom 20px
 	.o-card
 		box-shadow none
@@ -373,7 +375,7 @@ body
 .o-divider
 	position absolute
 	top calc(50% - 17px)
-	right -41px
+	right -49px
 	@extend .flex
 
 	&:before
@@ -385,10 +387,6 @@ body
 		width 400%
 		height 1px
 		background-color #d6d6d6
-
-	&--group
-		top 32px
-		right -49px
 
 	&--linked
 		.o-link
