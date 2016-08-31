@@ -30,6 +30,9 @@ $container-width = 1220px
 	padding 0
 	margin 0
 
+.h-margin-top
+	margin-top 78px
+
 .h-text-red
 	color #ff3116
 
@@ -90,11 +93,6 @@ body
 	margin 0 auto
 
 
-.l-content
-	position relative
-	padding 70px 55px
-	@media all and (max-width: $tablet)
-		padding 20px
 
 
 .l-row
@@ -113,10 +111,9 @@ body
 	width 100%
 	max-width 520px
 	height auto
-	min-height 100px
+	min-height 101px
 	background-color #fff
 	border-radius 3px
-	margin 10px 0
 	padding 10px
 	@extend .flex, .paper-shadow-z1, .transition
 	line-height 1.3
@@ -137,14 +134,11 @@ body
 
 	&__pic
 		margin-right 10px
-		@media all and (max-width: 480px)
-			display none
 
 		img
 			width 100%
 			max-width 115px
 			height auto
-
 
 	&__info
 		flex-grow 1
@@ -326,8 +320,60 @@ body
 			background-image url(../resources/icons/medal/medal-yellow.png)
 
 
-.o-divider
+.l-total
+	width 100%
+	text-align right
+	font-size 1.8rem
+	font-weight 500
+	padding 10px
+	margin-top -10px
+
+.l-wrap
+	overflow-x auto
+
+.l-content
 	position relative
+	@extend .flex
+	justify-content space-between
+	align-items stretch
+	min-width $container-width
+	padding 70px 55px
+
+.l-column-1
+	width 47.5%
+
+.l-column-2
+	width 47.5%
+
+.l-card-wrap
+	position relative
+	@extend .flex
+	justify-content flex-start
+	margin-bottom 20px
+
+.o-card-group
+	position relative
+	@extend .paper-shadow-z1
+	margin-right 7px
+	margin-bottom 20px
+	.o-card
+		box-shadow none
+
+.o-card-group__divider
+	position absolute
+	right 0
+	left 0
+	margin 0 auto
+	bottom -9px
+	width calc(100% - 20px)
+	height 1px
+	background-color #e4e4e4
+
+
+.o-divider
+	position absolute
+	top calc(50% - 17px)
+	right -41px
 	@extend .flex
 
 	&:before
@@ -339,8 +385,10 @@ body
 		width 400%
 		height 1px
 		background-color #d6d6d6
-		@media all and (max-width: 1200px)
-			display none
+
+	&--group
+		top 32px
+		right -49px
 
 	&--linked
 		.o-link
@@ -348,7 +396,7 @@ body
 
 	&--unlinked
 		&:before
-			left -400%
+			left -350%
 
 		.o-link
 			background-image url(../resources/icons/link-r.png)
@@ -360,19 +408,4 @@ body
 	height 35px
 	border-radius 50%
 	@extend .cover
-	@media all and (max-width: 1200px)
-		position absolute
-		top calc(50% - 17px)
-		left 0
-		right 0
-		margin 0 auto
 
-.l-total
-	width 100%
-	max-width 520px
-	text-align right
-	font-size 1.8rem
-	font-weight 500
-	@media all and (max-width: 1200px)
-		max-width none
-		text-align center
